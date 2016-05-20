@@ -31,6 +31,9 @@ public class DataBase extends SQLiteOpenHelper {
         db.execSQL(ScriptsSQL.criarTabelaEstabelecimento());
         db.execSQL(ScriptsSQL.criarTabelaPreco());
         db.execSQL(ScriptsSQL.criarTrigger());
+        db.execSQL(ScriptsSQL.insertsCervejas());
+        db.execSQL(ScriptsSQL.insertsEstabelecimentos());
+        db.execSQL(ScriptsSQL.insertsPreco());
     }
 
     @Override

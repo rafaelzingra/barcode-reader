@@ -41,19 +41,17 @@ import com.google.android.gms.vision.barcode.Barcode;
  */
 public class MainActivity extends Activity implements View.OnClickListener {
 
+    private static final int RC_BARCODE_CAPTURE = 9001;
+    private static final int RC_BARCODE_CAPTURE_ADD = 9002;
+    private static final String TAG = "C.barras principal";
     // use a compound button so either checkbox or switch widgets work.
     private CompoundButton autoFocus;
     private CompoundButton useFlash;
     private TextView statusMessage;
     private TextView barcodeValue;
-
     private DataBase dataBase;
     private SQLiteDatabase conn;
     private CervejaDao cervejaDao;
-
-    private static final int RC_BARCODE_CAPTURE = 9001;
-    private static final int RC_BARCODE_CAPTURE_ADD = 9002;
-    private static final String TAG = "C.barras principal";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +68,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             dataBase = new DataBase(this);
             conn = dataBase.getWritableDatabase();
 
-            ContentValues valuesCerveja = new ContentValues();
+           /* ContentValues valuesCerveja = new ContentValues();
             valuesCerveja.put("BARCODE","7891027130664");
             valuesCerveja.put("MARCA","Tilibra");
             valuesCerveja.put("ROTULO", "Caderno");
@@ -78,28 +76,28 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
             ContentValues valuesEstado = new ContentValues();
             valuesEstado.put("ESTADO","Acre");
-            valuesEstado.put("SIGLA","AC");
+            valuesEstado.put("SIGLA", "AC");
             conn.insertOrThrow("ESTADO", null, valuesEstado);
 
             ContentValues valuesCidade = new ContentValues();
             valuesCidade.put("CIDADE", "Indaiatuba");
-            valuesCidade.put("COD_ESTADO","1");
+            valuesCidade.put("COD_ESTADO", "1");
             conn.insertOrThrow("CIDADE", null, valuesCidade);
 
             valuesCidade.put("CIDADE", "Campinas");
-            valuesCidade.put("COD_ESTADO","1");
+            valuesCidade.put("COD_ESTADO", "1");
             conn.insertOrThrow("CIDADE", null, valuesCidade);
 
             ContentValues valuesEstabelecimento = new ContentValues();
             valuesEstabelecimento.put("ESTABELECIMENTO","Cato");
-            valuesEstabelecimento.put("COD_CIDADE","1");
+            valuesEstabelecimento.put("COD_CIDADE", "1");
             conn.insertOrThrow("ESTABELECIMENTO", null, valuesEstabelecimento);
 
             ContentValues valuesPreco = new ContentValues();
             valuesPreco.put("PRECO","Cato");
             valuesPreco.put("COD_CERVEJA","1");
-            valuesPreco.put("COD_ESTABELECIMENTO","1");
-            conn.insertOrThrow("PRECO", null, valuesPreco);
+            valuesPreco.put("COD_ESTABELECIMENTO", "1");
+            conn.insertOrThrow("PRECO", null, valuesPreco);*/
 
             AlertDialog.Builder mensagem = new AlertDialog.Builder(this);
             mensagem.setMessage("Base de dados criada com sucesso");

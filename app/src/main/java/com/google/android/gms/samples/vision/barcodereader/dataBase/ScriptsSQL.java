@@ -5739,10 +5739,81 @@ public class ScriptsSQL {
         StringBuilder stringBuilder = new StringBuilder();
 
         //stringBuilder.append("INSERT INTO CERVEJA (BARCODE,MARCA,ROTULO) VALUES('7891027130664', 'Tilibra', 'Caderno');");
+        stringBuilder.append("INSERT INTO CERVEJA (_id, BARCODE,MARCA,ROTULO) VALUES(1, '7891027130664', 'Tilibra', 'Caderno');");
+        stringBuilder.append("INSERT INTO CERVEJA (_id, BARCODE,MARCA,ROTULO) VALUES(1, '7891149101900', 'Stella Artois', 'Stella Artois');");
+        stringBuilder.append("INSERT INTO CERVEJA (_id, BARCODE,MARCA,ROTULO) VALUES(1, '7896045504831', 'Amstel', 'Lager');");
+        stringBuilder.append("INSERT INTO CERVEJA (_id, BARCODE,MARCA,ROTULO) VALUES(1, '7897149106608', 'Skol', 'Beats Senses');");
 
         return stringBuilder.toString();
     }
-	
-	
-	
+
+    public static String insertsEstabelecimentos() {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        stringBuilder.append("INSERT INTO ESTABELECIMENTO (_id, ESTABELECIMENTO,COD_CIDADE) VALUES (1, 'Carrefour', 4943);");
+        stringBuilder.append("INSERT INTO ESTABELECIMENTO (_id, ESTABELECIMENTO,COD_CIDADE) VALUES (2, 'Sumerbol', 4943);");
+        stringBuilder.append("INSERT INTO ESTABELECIMENTO (_id, ESTABELECIMENTO,COD_CIDADE) VALUES (3, 'Paulistão', 4943);");
+        stringBuilder.append("INSERT INTO ESTABELECIMENTO (_id, ESTABELECIMENTO,COD_CIDADE) VALUES (4, 'Disk Breja', 4943);");
+        stringBuilder.append("INSERT INTO ESTABELECIMENTO (_id, ESTABELECIMENTO,COD_CIDADE) VALUES (5, 'Cervejaria do Alemão', 4943);");
+        stringBuilder.append("INSERT INTO ESTABELECIMENTO (_id, ESTABELECIMENTO,COD_CIDADE) VALUES (6, 'Pão de Açucar', 4943);");
+        stringBuilder.append("INSERT INTO ESTABELECIMENTO (_id, ESTABELECIMENTO,COD_CIDADE) VALUES (7, 'Extra', 4943);");
+        stringBuilder.append("INSERT INTO ESTABELECIMENTO (_id, ESTABELECIMENTO,COD_CIDADE) VALUES (8, 'Walmart', 4943);");
+        stringBuilder.append("INSERT INTO ESTABELECIMENTO (_id, ESTABELECIMENTO,COD_CIDADE) VALUES (9, 'Tenda', 4943);");
+        stringBuilder.append("INSERT INTO ESTABELECIMENTO (_id, ESTABELECIMENTO,COD_CIDADE) VALUES (10, 'Cato', 4943);");
+
+        return stringBuilder.toString();
+    }
+
+    public static String insertsPreco() {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (3.32, 1, 1);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (4.41, 1, 2);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (5.11, 1, 3);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (3.41, 1, 4);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (2.21, 1, 5);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (1.50, 1, 6);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (2.10, 1, 7);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (3.20, 1, 8);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (4.00, 1, 9);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (2.00, 1, 10);");
+
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (3.32, 2, 1);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (4.51, 2, 2);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (4.41, 2, 3);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (6.41, 2, 4);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (2.21, 2, 5);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (1.50, 2, 6);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (1.10, 2, 7);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (2.20, 2, 8);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (5.00, 2, 9);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (5.00, 2, 10);");
+
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (3.32, 3, 1);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (4.41, 3, 2);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (2.41, 3, 3);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (3.41, 3, 4);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (2.21, 3, 5);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (1.50, 3, 6);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (3.10, 3, 7);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (3.20, 3, 8);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (4.00, 3, 9);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (4.00, 3, 10);");
+
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (3.32, 4, 1);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (9.41, 4, 2);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (4.41, 4, 3);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (3.41, 4, 4);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (2.21, 4, 5);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (1.50, 4, 6);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (2.10, 4, 7);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (3.20, 4, 8);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (4.00, 4, 9);");
+        stringBuilder.append("INSERT INTO PRECO (PRECO, COD_CERVEJA, COD_ESTABELECIMENTO) VALUES (1.00, 4, 10);");
+
+
+        return stringBuilder.toString();
+    }
+
+
 }
