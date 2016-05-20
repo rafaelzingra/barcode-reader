@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3178362320bcf51228835b60ff978efadfd1f783">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-5b83c71ca86b53fa0f14403dedacfd756cf16a66.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3aed37c38c56679602255dd72ef356da5d327cda">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-f91012a8a9e16c51ed9e9148e12b4f2dc38e39cb.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="325788a04b436a0bccbc5b4c54cf0f12ebdcbd2d">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-526fab9d5f28edd321238787d5e3dba84e4e41c1.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="95758a2905669affbffc5ddd262921d375674fad">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-17340b6f97cfcd2ddfe41bcc7ce9cf6e6dd04c2f.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d93480da1d303122ee67dc3bc23e6297bdef9951">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-4ff4db03b20e829768cb1ac3eceb1a21083d297f.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="041d93cf0533591c29d1d7263b2fa114dbfb20bd">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-d806512975454a502b7c3b0d6dfebb00a7dd932b.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="993834cb17d07d51b92db89d2c330243592ebf77">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-78c2ab466a2f3b9e25f3ee07cb11f3345e659d47.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="482de223655d06253cc6a4955d653f8994169500">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-4f1a5766e7d5069b5006bca75606671249847d57.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="82825756edeeb3b56b15e73b2edd56e93da5a444">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-6ecd249fbffcc9ed2a68ae9d4aa69ce05951c87c.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="9cf8c0ef60847621c7ad00b4f78dbfc9daba4af2">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-250a45c43a7f42b4ef01f295526781310e92f1ac.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="97f3b099801a9ad9d70e835b9125273e986eb68d">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-1e8710bc9183f3785120ce916aa2e710bc01cfb9.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-ed02e32ff0e3e2444da90452e62c8c679aa95e70.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-6463cfa3fc26481ff46667ec449806d9b553230b.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="17449c47df35c754b257532052f1270c444f7993">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-c0559a831776c0aedea8e791a39bb9f4fbc7c6b6.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-2a0db8e25a3ea723b8bea6d49fe106fc47fdcb6c.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-d471a5f328cedc7cc8c69161e1ab0f9038ff4e83.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="997773777cf3904c11d6764fe3b7668538220e49">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-792c303d4a7a3b828a7d85c5f7cf327db5826e8e.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-5914dc261f9b4cec4396dba6c27d99a629b3e1ce.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="dcb5b75baf05d92e61d5706737200ee55949f97b">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-0789d0838bffec2f9827d6ad143dfbd82f441b64.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-dfaec492ad5d450c7567d9a8a950aae49cf9e852.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-1f3c683ee574602e7da049212d54bdf07510e014.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-aea603e233d51ece8f4c0d880b1a216c57e7cbef.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d294caf562c4c678b2ef351662a0ca6f1a4d06c0">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-1308dd9d8d1d6e6b74b709f0a21f06b1ac574d45.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b92002cb2f0e11a226ac5bac6dff1dc2a9d0b774">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-2aa45ff80115cbf3c8d55746d196074369b97c90.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3c729e6d76a36c5dc27e6a4c4009296f49eaa88a">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-d54402fff60f61381c3cc688b186976b448300f0.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d61920aba361832a9545a43fa8c9453eb02f18f7">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-64c63bc58bd26293645fe370ac6bf0af4d5e796a.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3b05c18f60969ecc2ba49c0409c4b96be2d9cb0c">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-a0b311b3f284b273853b2cc1631b180f19833c11.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-505af4c1495aa2e8e3c4576793dc0a63310fdfbd.jar" />
+    </item>
+    <item
+        jar="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2a7e47da654546f9457deb6132364f1bf33a1857">
+        <dex dex="C:\Users\rafae\AndroidStudioProjects\barcode-reader\barcode-reader\app\build\intermediates\pre-dexed\debug\classes-c01ef163bae5e345c9585c0babe87560eeb7f76b.jar" />
+    </item>
+
+</items>

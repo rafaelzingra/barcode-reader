@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ok">OK</string>
+    <string name="permission_camera_rationale">É preciso acessar a camera para escanear</string>
+    <string name="no_camera_permission">O aplicativo não pode funcionar por que não tem permição para acessar a camera. O aplicativo será finalizado.</string>
+    <string name="low_storage_error">Espaço em disco insuficiente para baixar as dependências do detector de faces</string>
+    <string name="title_activity_main">Beer Finder</string>
+    <string name="barcode_header">Clique no botão &quot;Consultar&quot; para buscar por um produto</string>
+    <string name="read_barcode">Consultar</string>
+    <string name="auto_focus">Auto Focus</string>
+    <string name="use_flash">Usar Flash</string>
+    <string name="barcode_success">Código de barras lido com sucesso</string>
+    <string name="barcode_failure">Código de barras não detectado</string>
+    <string name="barcode_error">"Erro ao ler código de barras: %1$s"</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="title_activity_add">Adicionar Preço</string>
+    <string name="lbl_cerveja">Cerveja</string>
+    <string name="lbl_ciddes">Cidades</string>
+    <string name="lbl_estados">Estados</string>
+    <string name="lbl_preco">Preço</string>
+    <string name="btn_voltar">Voltar</string>
+    <string name="btn_add">Add Valor</string>
+    <string name="lbl_estabeleciemento">Estabelecimento</string>
+</resources>
