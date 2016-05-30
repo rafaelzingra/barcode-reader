@@ -69,4 +69,3 @@
         android:layout_alignEnd="@+id/use_flash" />
 
 </RelativeLayout>
-<!-- From: file:/C:/Users/rafae/AndroidStudioProjects/barcode-reader/barcode-reader/app/src/main/res/layout-land/activity_main.xml -->

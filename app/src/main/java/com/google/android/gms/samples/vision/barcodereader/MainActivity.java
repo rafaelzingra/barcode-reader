@@ -68,7 +68,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             dataBase = new DataBase(this);
             conn = dataBase.getWritableDatabase();
 
-           /* ContentValues valuesCerveja = new ContentValues();
+          /* ContentValues valuesCerveja = new ContentValues();
             valuesCerveja.put("BARCODE","7891027130664");
             valuesCerveja.put("MARCA","Tilibra");
             valuesCerveja.put("ROTULO", "Caderno");

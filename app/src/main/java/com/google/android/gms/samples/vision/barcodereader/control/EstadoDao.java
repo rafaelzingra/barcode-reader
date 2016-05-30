@@ -32,8 +32,7 @@ public class EstadoDao {
     public ArrayList<Estado> buscraEstados(){
         ArrayList<Estado> estados = new ArrayList<Estado>();
 
-        Cursor cursor = conn.query("ESTADO", null, null, null, null, null, null);
-
+        Cursor cursor = conn.rawQuery("select * from estado", null);
         if(cursor.getCount() > 0){
 
             cursor.moveToFirst();
