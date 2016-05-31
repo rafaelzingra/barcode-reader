@@ -1,10 +1,12 @@
 package com.google.android.gms.samples.vision.barcodereader;
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.app.Activity;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -12,8 +14,6 @@ import com.google.android.gms.samples.vision.barcodereader.control.CervejaDao;
 import com.google.android.gms.samples.vision.barcodereader.control.CidadeDao;
 import com.google.android.gms.samples.vision.barcodereader.control.EstadoDao;
 import com.google.android.gms.samples.vision.barcodereader.dataBase.DataBase;
-
-import java.sql.SQLException;
 
 public class AddActivity extends Activity implements View.OnClickListener {
 
@@ -30,6 +30,9 @@ public class AddActivity extends Activity implements View.OnClickListener {
     private CidadeDao cidadeDao;
 
     private TextView txtNomeCerveja;
+    private EditText nomeCerveja;
+    private EditText precoCerveja;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,11 @@ public class AddActivity extends Activity implements View.OnClickListener {
 
         txtNomeCerveja = (TextView)findViewById(R.id.lbl_nome_cerveja);
         Bundle bundle = getIntent().getExtras();
+
+        nomeCerveja = (EditText) findViewById(R.id.edt_estabelecimento);
+        precoCerveja = (EditText) findViewById(R.id.edt_preco);
+
+
 
         if(bundle.containsKey("CERVEJA")){
             txtNomeCerveja.setText(bundle.getString("CERVEJA").toString());
@@ -56,7 +64,11 @@ public class AddActivity extends Activity implements View.OnClickListener {
             finish();
         }else{
             if(v.getId() == R.id.btn_add_valor){
-
+//                conn.execSQL("insert into preco values(41,1.79,5,1)");
+                AlertDialog.Builder mensagem = new AlertDialog.Builder(this);
+                mensagem.setMessage("insert ok");
+                mensagem.setNeutralButton("OK", null);
+                mensagem.show();
             }
         }
     }
