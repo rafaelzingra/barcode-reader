@@ -1,7 +1,7 @@
 package com.google.android.gms.samples.vision.barcodereader;
 
 import android.app.Activity;
-import android.app.AlertDialog;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.samples.vision.barcodereader.control.CervejaDao;
 import com.google.android.gms.samples.vision.barcodereader.control.CidadeDao;
@@ -62,13 +63,22 @@ public class AddActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         if(v.getId() == R.id.btn_voltar){
             finish();
-        }else{
+        } else {
             if(v.getId() == R.id.btn_add_valor){
-//                conn.execSQL("insert into preco values(41,1.79,5,1)");
-                AlertDialog.Builder mensagem = new AlertDialog.Builder(this);
-                mensagem.setMessage("insert ok");
+                //conn.execSQL("select * from cerveja");
+
+                Cursor resultSet = conn.rawQuery("Select * from cerveja", null);
+                resultSet.moveToFirst();
+                while (resultSet.moveToNext()) {
+                    Toast.makeText(getApplicationContext(), resultSet.getString(2), Toast.LENGTH_SHORT).show();
+                }
+                /*String barcode = resultSet.getString(1);
+                String marca = resultSet.getString(2);*/
+
+                /*AlertDialog.Builder mensagem = new AlertDialog.Builder(this);
+                mensagem.setMessage();
                 mensagem.setNeutralButton("OK", null);
-                mensagem.show();
+                mensagem.show();*/
             }
         }
     }
