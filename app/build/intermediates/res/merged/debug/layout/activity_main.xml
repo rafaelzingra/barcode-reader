@@ -211,7 +211,7 @@
             android:layout_weight="1"
             android:layout_gravity="left|bottom" />
 
-        <Button
+        <!--<Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/adicionar"
@@ -220,7 +220,7 @@
             android:layout_alignRight="@+id/use_flash"
             android:layout_alignEnd="@+id/use_flash"
             android:layout_weight="1"
-            android:layout_gravity="bottom|right" />
+            android:layout_gravity="bottom|right" />-->
     </LinearLayout>
 
 </LinearLayout>

@@ -16,23 +16,20 @@
 
 package com.google.android.gms.samples.vision.barcodereader;
 
-import android.app.AlertDialog;
-import android.content.ContentValues;
-import android.content.Intent;
-import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.TextView;
-import android.database.sqlite.*;
 
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.samples.vision.barcodereader.control.CervejaDao;
-import com.google.android.gms.samples.vision.barcodereader.control.EstadoDao;
 import com.google.android.gms.samples.vision.barcodereader.dataBase.DataBase;
-import com.google.android.gms.samples.vision.barcodereader.model.Cerveja;
 import com.google.android.gms.vision.barcode.Barcode;
 
 /**
@@ -67,43 +64,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
         try {
             dataBase = new DataBase(this);
             conn = dataBase.getWritableDatabase();
-
-          /* ContentValues valuesCerveja = new ContentValues();
-            valuesCerveja.put("BARCODE","7891027130664");
-            valuesCerveja.put("MARCA","Tilibra");
-            valuesCerveja.put("ROTULO", "Caderno");
-            conn.insertOrThrow("CERVEJA", null, valuesCerveja);
-
-            ContentValues valuesEstado = new ContentValues();
-            valuesEstado.put("ESTADO","Acre");
-            valuesEstado.put("SIGLA", "AC");
-            conn.insertOrThrow("ESTADO", null, valuesEstado);
-
-            ContentValues valuesCidade = new ContentValues();
-            valuesCidade.put("CIDADE", "Indaiatuba");
-            valuesCidade.put("COD_ESTADO", "1");
-            conn.insertOrThrow("CIDADE", null, valuesCidade);
-
-            valuesCidade.put("CIDADE", "Campinas");
-            valuesCidade.put("COD_ESTADO", "1");
-            conn.insertOrThrow("CIDADE", null, valuesCidade);
-
-            ContentValues valuesEstabelecimento = new ContentValues();
-            valuesEstabelecimento.put("ESTABELECIMENTO","Cato");
-            valuesEstabelecimento.put("COD_CIDADE", "1");
-            conn.insertOrThrow("ESTABELECIMENTO", null, valuesEstabelecimento);
-
-            ContentValues valuesPreco = new ContentValues();
-            valuesPreco.put("PRECO","Cato");
-            valuesPreco.put("COD_CERVEJA","1");
-            valuesPreco.put("COD_ESTABELECIMENTO", "1");
-            conn.insertOrThrow("PRECO", null, valuesPreco);*/
-
             AlertDialog.Builder mensagem = new AlertDialog.Builder(this);
             mensagem.setMessage("Base de dados criada com sucesso");
             mensagem.setNeutralButton("OK", null);
             mensagem.show();
-        }catch (SQLiteException ex){
+        } catch (SQLiteException ex) {
             AlertDialog.Builder mensagem = new AlertDialog.Builder(this);
             mensagem.setMessage("Erro ao criar base de dados" + ex.getMessage());
             mensagem.setNeutralButton("OK", null);
@@ -128,11 +93,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
             intent.putExtra(BarcodeCaptureActivity.AutoFocus, autoFocus.isChecked());
             intent.putExtra(BarcodeCaptureActivity.UseFlash, useFlash.isChecked());
             startActivityForResult(intent, RC_BARCODE_CAPTURE);
-        }else{
-            if(v.getId() == R.id.btn_adicionar){
+        } else {
+            if (v.getId() == R.id.btn_adicionar) {
+
                 Intent intent = new Intent(this, AddActivity.class);
                 intent.putExtra("CERVEJA", barcodeValue.getText().toString());
                 startActivity(intent);
+
             }
         }
     }
@@ -161,6 +128,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
      */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
         if (requestCode == RC_BARCODE_CAPTURE) {
             if (resultCode == CommonStatusCodes.SUCCESS) {
                 if (data != null) {
@@ -171,11 +139,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     conn = dataBase.getWritableDatabase();
                     cervejaDao = new CervejaDao(conn);
 
-                    for(int i = 0; i < cervejaDao.buscraCervejas().size(); i++){
-                        if(barcode.displayValue.trim().equals(cervejaDao.buscraCervejas().get(i).getBarcode())){
+                    for (int i = 0; i < cervejaDao.buscraCervejas().size(); i++) {
+                        if (barcode.displayValue.trim().equals(cervejaDao.buscraCervejas().get(i).getBarcode())) {
                             barcodeValue.setText(cervejaDao.buscraCervejas().get(i).getRotulo().toString());
                             break;
-                        }else{
+                        } else {
                             barcodeValue.setText("Produto não cadastrado");
                         }
                     }
@@ -189,8 +157,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 statusMessage.setText(String.format(getString(R.string.barcode_error),
                         CommonStatusCodes.getStatusCodeString(resultCode)));
             }
-        }
-        else {
+        } else {
             super.onActivityResult(requestCode, resultCode, data);
         }
     }
