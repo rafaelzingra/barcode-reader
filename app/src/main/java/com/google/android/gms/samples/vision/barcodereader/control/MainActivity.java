@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.android.gms.samples.vision.barcodereader;
+package com.google.android.gms.samples.vision.barcodereader.control;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -28,24 +28,24 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.google.android.gms.common.api.CommonStatusCodes;
-import com.google.android.gms.samples.vision.barcodereader.control.CervejaDao;
+import com.google.android.gms.samples.vision.barcodereader.R;
 import com.google.android.gms.samples.vision.barcodereader.dataBase.DataBase;
+import com.google.android.gms.samples.vision.barcodereader.model.CervejaDao;
 import com.google.android.gms.vision.barcode.Barcode;
 
-/**
- * Main activity demonstrating how to pass extra parameters to an activity that
- * reads barcodes.
- */
+
 public class MainActivity extends Activity implements View.OnClickListener {
 
     private static final int RC_BARCODE_CAPTURE = 9001;
     private static final int RC_BARCODE_CAPTURE_ADD = 9002;
     private static final String TAG = "C.barras principal";
-    // use a compound button so either checkbox or switch widgets work.
+
     private CompoundButton autoFocus;
     private CompoundButton useFlash;
     private TextView statusMessage;
     private TextView barcodeValue;
+    private TextView marcaValue;
+    private TextView rotuloValue;
     private DataBase dataBase;
     private SQLiteDatabase conn;
     private CervejaDao cervejaDao;
@@ -57,6 +57,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         statusMessage = (TextView)findViewById(R.id.lbl_cerveja);
         barcodeValue = (TextView)findViewById(R.id.barcode_value);
+        marcaValue = (TextView) findViewById(R.id.marca_value);
+        rotuloValue = (TextView) findViewById(R.id.rotulo_value);
 
         autoFocus = (CompoundButton) findViewById(R.id.auto_focus);
         useFlash = (CompoundButton) findViewById(R.id.use_flash);
@@ -64,10 +66,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         try {
             dataBase = new DataBase(this);
             conn = dataBase.getWritableDatabase();
-            AlertDialog.Builder mensagem = new AlertDialog.Builder(this);
+            /*AlertDialog.Builder mensagem = new AlertDialog.Builder(this);
             mensagem.setMessage("Base de dados criada com sucesso");
             mensagem.setNeutralButton("OK", null);
-            mensagem.show();
+            mensagem.show();*/
         } catch (SQLiteException ex) {
             AlertDialog.Builder mensagem = new AlertDialog.Builder(this);
             mensagem.setMessage("Erro ao criar base de dados" + ex.getMessage());
@@ -80,11 +82,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         findViewById(R.id.btn_adicionar).setOnClickListener(this);
     }
 
-    /**
-     * Called when a view has been clicked.
-     *
-     * @param v The view that was clicked.
-     */
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.read_barcode) {
@@ -104,28 +101,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
     }
 
-    /**
-     * Called when an activity you launched exits, giving you the requestCode
-     * you started it with, the resultCode it returned, and any additional
-     * data from it.  The <var>resultCode</var> will be
-     * {@link #RESULT_CANCELED} if the activity explicitly returned that,
-     * didn't return any result, or crashed during its operation.
-     * <p/>
-     * <p>You will receive this call immediately before onResume() when your
-     * activity is re-starting.
-     * <p/>
-     *
-     * @param requestCode The integer request code originally supplied to
-     *                    startActivityForResult(), allowing you to identify who this
-     *                    result came from.
-     * @param resultCode  The integer result code returned by the child activity
-     *                    through its setResult().
-     * @param data        An Intent, which can return result data to the caller
-     *                    (various data can be attached to Intent "extras").
-     * @see #startActivityForResult
-     * @see #createPendingResult
-     * @see #setResult(int)
-     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
@@ -141,10 +116,21 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                     for (int i = 0; i < cervejaDao.buscraCervejas().size(); i++) {
                         if (barcode.displayValue.trim().equals(cervejaDao.buscraCervejas().get(i).getBarcode())) {
-                            barcodeValue.setText(cervejaDao.buscraCervejas().get(i).getRotulo().toString());
+                            barcodeValue.setText(cervejaDao.buscraCervejas().get(i).getRotulo().toString().toUpperCase());
+
+                            //marcaValue.setText(cervejaDao.buscraCervejas().get(i).getMarca().toString().toUpperCase());
+                            //textView3.setText(cervejaDao.buscraCervejas().get(i).getRotulo().toString().toUpperCase());
                             break;
-                        } else {
-                            barcodeValue.setText("Produto não cadastrado");
+                        }
+                       /*Cerveja cerveja = cervejaDao.getCerveja(barcode.displayValue.trim());
+                        if(cerveja != null)
+                        {
+                            //barcodeValue.setText(cerveja.getRotulo().toString());
+                            //textView2.setText(cerveja.getMarca());
+
+                        }*/
+                        else {
+                            barcodeValue.setText(barcode.displayValue.trim().toString());
                         }
                     }
 
