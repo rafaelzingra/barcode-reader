@@ -23,13 +23,8 @@
             android:value="barcode" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".control.MainActivity"
             android:label="@string/title_activity_main">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".BarcodeCaptureActivity"
@@ -37,6 +32,21 @@
         <activity
             android:name=".AddActivity"
             android:label="@string/title_activity_add"></activity>
+
+        <activity android:name="henrique.Principal"
+            android:label="Principal">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="henrique.Logedin"></activity>
+
+        <activity android:name="henrique.SignUp"
+            android:label="Cadastro"></activity>
+
     </application>
 
 </manifest>

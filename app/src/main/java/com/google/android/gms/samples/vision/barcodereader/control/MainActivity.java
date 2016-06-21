@@ -28,9 +28,11 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.google.android.gms.common.api.CommonStatusCodes;
+import com.google.android.gms.samples.vision.barcodereader.AddActivity;
+import com.google.android.gms.samples.vision.barcodereader.BarcodeCaptureActivity;
 import com.google.android.gms.samples.vision.barcodereader.R;
 import com.google.android.gms.samples.vision.barcodereader.dataBase.DataBase;
-import com.google.android.gms.samples.vision.barcodereader.model.CervejaDao;
+import com.google.android.gms.samples.vision.barcodereader.control.CervejaDao;
 import com.google.android.gms.vision.barcode.Barcode;
 
 

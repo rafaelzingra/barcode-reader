@@ -44,13 +44,8 @@
             android:value="barcode" />
 
         <activity
-            android:name="com.google.android.gms.samples.vision.barcodereader.MainActivity"
+            android:name="com.google.android.gms.samples.vision.barcodereader.control.MainActivity"
             android:label="@string/title_activity_main" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.google.android.gms.samples.vision.barcodereader.BarcodeCaptureActivity"
@@ -58,6 +53,20 @@
         <activity
             android:name="com.google.android.gms.samples.vision.barcodereader.AddActivity"
             android:label="@string/title_activity_add" />
+        <activity
+            android:name="henrique.Principal"
+            android:label="Principal" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="henrique.Logedin" />
+        <activity
+            android:name="henrique.SignUp"
+            android:label="Cadastro" />
+
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
