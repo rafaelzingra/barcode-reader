@@ -1,7 +1,7 @@
-package com.google.android.gms.samples.vision.barcodereader;
+package com.google.android.gms.samples.vision.barcodereader.control;
 
 import android.app.Activity;
-import android.database.Cursor;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -11,10 +11,15 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.samples.vision.barcodereader.control.CervejaDao;
-import com.google.android.gms.samples.vision.barcodereader.control.CidadeDao;
-import com.google.android.gms.samples.vision.barcodereader.control.EstadoDao;
+import com.google.android.gms.samples.vision.barcodereader.R;
 import com.google.android.gms.samples.vision.barcodereader.dataBase.DataBase;
+import com.google.android.gms.samples.vision.barcodereader.model.Cerveja;
+import com.google.android.gms.samples.vision.barcodereader.model.CervejaDao;
+import com.google.android.gms.samples.vision.barcodereader.model.CidadeDao;
+import com.google.android.gms.samples.vision.barcodereader.model.EstabelecimentoDao;
+import com.google.android.gms.samples.vision.barcodereader.model.EstadoDao;
+import com.google.android.gms.samples.vision.barcodereader.model.Preco;
+import com.google.android.gms.samples.vision.barcodereader.model.PrecoDao;
 
 public class AddActivity extends Activity implements View.OnClickListener {
 
@@ -26,14 +31,17 @@ public class AddActivity extends Activity implements View.OnClickListener {
 
     private DataBase dataBase;
     private SQLiteDatabase conn;
-    private CervejaDao cervejaDao;
+    EstabelecimentoDao estabelecimentoDao = new EstabelecimentoDao(conn);
+    CervejaDao cervejaDao = new CervejaDao(conn);
+    PrecoDao precoDao = new PrecoDao(conn);
     private EstadoDao estadoDao;
     private CidadeDao cidadeDao;
-
     private TextView txtNomeCerveja;
     private EditText estabelecimentoCerveja;
     private EditText precoCerveja;
-
+    private EditText marcaCerveja;
+    private EditText nomeCerveja;
+    private TextView barcode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +56,10 @@ public class AddActivity extends Activity implements View.OnClickListener {
 
         estabelecimentoCerveja = (EditText) findViewById(R.id.edt_estabelecimento);
         precoCerveja = (EditText) findViewById(R.id.edt_preco);
+
+        marcaCerveja = (EditText) findViewById(R.id.edt_marca);
+        nomeCerveja = (EditText) findViewById(R.id.edt_nomeCerveja);
+        barcode = (TextView) findViewById(R.id.lbl_nome_cerveja);
 
 
 
@@ -70,25 +82,53 @@ public class AddActivity extends Activity implements View.OnClickListener {
                 Toast.makeText(getApplicationContext(), spnCidades.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
                 Toast.makeText(getApplicationContext(), estabelecimentoCerveja.getText(), Toast.LENGTH_SHORT).show();
                 Toast.makeText(getApplicationContext(), precoCerveja.getText(), Toast.LENGTH_SHORT).show();*/
-
-                Cursor verificaEstabelecimento = conn.rawQuery("select 1 from estabelecimento where estabelecimento ='" + estabelecimentoCerveja.getText() + "'", null);
                 try {
-                    if (verificaEstabelecimento == null) {
-                        conn.execSQL("insert into estabelecimento values((select max(_id)+1 from estabelecimento),'" + estabelecimentoCerveja.getText() + "',(select _id from cidade where cidade ='" + spnCidades.getSelectedItem().toString() + "'))");
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Estabelecimento já cadastrado", Toast.LENGTH_SHORT).show();
+                    try {
+                        try {
+                            Cerveja cerveja = new Cerveja();
+                            cerveja.setBarcode(barcode.getText().toString());
+                            cerveja.setMarca(marcaCerveja.getText().toString());
+                            cerveja.setRotulo(nomeCerveja.getText().toString());
+                            conn = dataBase.getWritableDatabase();
+                            cervejaDao = new CervejaDao(conn);
+                            cervejaDao.adicionarCerveja(cerveja);
+
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+                        conn = dataBase.getWritableDatabase();
+                        if (estabelecimentoDao.verificaEstabelecimento(estabelecimentoCerveja.getText().toString()) == null) {
+                            estabelecimentoDao.insertEstabelecimento(estabelecimentoCerveja.getText().toString(), spnCidades.getSelectedItem().toString());
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Estabelecimento já cadastrado", Toast.LENGTH_SHORT).show();
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
+
+                    Preco preco = new Preco();
+                    preco.setPreco(Double.parseDouble(precoCerveja.getText().toString()));
+                    //preco.setCod_cerveja(cervejaDao.getCodigo());
+                    preco.setCod_estabelecimento(estabelecimentoDao.getCodigo(estabelecimentoCerveja.getText().toString()));
+                    conn = dataBase.getWritableDatabase();
+                    precoDao = new PrecoDao(conn);
+                    precoDao.adicionarPreco(preco);
+
                 } catch (Exception e) {
-                    Toast.makeText(getApplicationContext(), "Nao deu fera", Toast.LENGTH_SHORT).show();
+
                     e.printStackTrace();
                 }
+                Toast.makeText(getApplicationContext(), "Obrigado pela contribuição!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
 
-
-                /*Curor resultSet = conn.rawQuery("Select * from cerveja", null);
+                /*Cursor resultSet = conn.rawQuery("Select * from cerveja", null);
                 resultSet.moveToFirst();
                 while (resultSet.moveToNext())
-                {
-                    Toast.makeText(getApplicationContext(), resultSet.getString(2), Toast.LENGTH_SHORT).show();
+                {Toast
+                    .makeText(getApplicationContext(), resultSet.getString(2), Toast.LENGTH_SHORT).show();
                 }*/
                 /*String barcode = resultSet.getString(1);
                 String marca = resultSet.getString(2);*/

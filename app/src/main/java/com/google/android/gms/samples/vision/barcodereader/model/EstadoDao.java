@@ -1,10 +1,8 @@
-package com.google.android.gms.samples.vision.barcodereader.control;
+package com.google.android.gms.samples.vision.barcodereader.model;
 
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-
-import com.google.android.gms.samples.vision.barcodereader.model.Estado;
 
 import java.util.ArrayList;
 

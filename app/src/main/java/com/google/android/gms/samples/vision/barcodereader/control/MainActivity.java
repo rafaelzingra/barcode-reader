@@ -31,6 +31,7 @@ import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.samples.vision.barcodereader.R;
 import com.google.android.gms.samples.vision.barcodereader.dataBase.DataBase;
 import com.google.android.gms.samples.vision.barcodereader.model.CervejaDao;
+import com.google.android.gms.samples.vision.barcodereader.model.PrecoDao;
 import com.google.android.gms.vision.barcode.Barcode;
 
 
@@ -45,10 +46,18 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private TextView statusMessage;
     private TextView barcodeValue;
     private TextView marcaValue;
-    private TextView rotuloValue;
+    private TextView mensagem;
+    private TextView precoMedio;
+    private TextView menorPreco;
+    private TextView menorPreco_local;
+    private TextView maiorPreco;
+    private TextView maiorPreco_local;
     private DataBase dataBase;
     private SQLiteDatabase conn;
     private CervejaDao cervejaDao;
+    private PrecoDao precoDao;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,10 +67,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
         statusMessage = (TextView)findViewById(R.id.lbl_cerveja);
         barcodeValue = (TextView)findViewById(R.id.barcode_value);
         marcaValue = (TextView) findViewById(R.id.marca_value);
-        rotuloValue = (TextView) findViewById(R.id.rotulo_value);
-
+        mensagem = (TextView) findViewById(R.id.mensagem);
         autoFocus = (CompoundButton) findViewById(R.id.auto_focus);
         useFlash = (CompoundButton) findViewById(R.id.use_flash);
+        precoMedio = (TextView) findViewById(R.id.precoMedio_value);
+        menorPreco = (TextView) findViewById(R.id.menorPreco_value);
+        menorPreco_local = (TextView) findViewById(R.id.menorPreco_local);
+        maiorPreco = (TextView) findViewById(R.id.maiorPreco_value);
+        maiorPreco_local = (TextView) findViewById(R.id.maiorPreco_local);
 
         try {
             dataBase = new DataBase(this);
@@ -113,14 +126,21 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     dataBase = new DataBase(this);
                     conn = dataBase.getWritableDatabase();
                     cervejaDao = new CervejaDao(conn);
+                    precoDao = new PrecoDao(conn);
 
                     for (int i = 0; i < cervejaDao.buscraCervejas().size(); i++) {
                         if (barcode.displayValue.trim().equals(cervejaDao.buscraCervejas().get(i).getBarcode())) {
-                            barcodeValue.setText(cervejaDao.buscraCervejas().get(i).getRotulo().toString().toUpperCase());
+                            barcodeValue.setText("Nome: " + cervejaDao.buscraCervejas().get(i).getRotulo().toString().toUpperCase());
 
-                            //marcaValue.setText(cervejaDao.buscraCervejas().get(i).getMarca().toString().toUpperCase());
-                            //textView3.setText(cervejaDao.buscraCervejas().get(i).getRotulo().toString().toUpperCase());
-                            break;
+                            marcaValue.setText("Marca: " + cervejaDao.buscraCervejas().get(i).getMarca().toString().toUpperCase());
+                            precoMedio.setText("Preço Médio: " + precoDao.getPrecoMedio(cervejaDao.buscraCervejas().get(i).get_id()));
+                            menorPreco.setText("Menor preço: 1.99");
+                            menorPreco_local.setText("Local: Cato");
+                            maiorPreco.setText("Maior preço: 2.15");
+                            maiorPreco_local.setText("Local: Pao de Açucar");
+
+
+
                         }
                        /*Cerveja cerveja = cervejaDao.getCerveja(barcode.displayValue.trim());
                         if(cerveja != null)
@@ -131,6 +151,19 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         }*/
                         else {
                             barcodeValue.setText(barcode.displayValue.trim().toString());
+                           /* {
+                                   String tmp = (barcode == null)?"nur":barcode.displayValue.trim().toString();
+                               if (mensagem==null)
+                                   Toast.makeText(getApplicationContext(),"nurrr",Toast.LENGTH_LONG);
+                                   else{
+                                    mensagem.setText(tmp);}
+                                Toast.makeText(getApplicationContext(),tmp,Toast.LENGTH_LONG);
+
+
+
+                            }*/
+                            // mensagem.setText("Teste");
+
                         }
                     }
 

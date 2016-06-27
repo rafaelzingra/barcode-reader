@@ -302,7 +302,8 @@
     <string name="barcode_failure">Código de barras não detectado</string>
     <string name="barcode_header">Clique no botão "Consultar" para buscar por um produto</string>
     <string name="barcode_success">Código de barras lido com sucesso</string>
-    <string name="btn_add">Add Valor</string>
+    <string name="barcode_value">nomeCerveja</string>
+    <string name="btn_add">Adicionar</string>
     <string name="btn_voltar">Voltar</string>
     <string name="cast_notification_connected_message">Connected to <ns1:g id="name">%1$s</ns1:g></string>
     <string name="cast_notification_connecting_message">Connecting to <ns1:g id="name">%1$s</ns1:g></string>
@@ -342,12 +343,15 @@
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
     <string name="decline">Decline</string>
-    <string name="lbl_cerveja">Cerveja</string>
+    <string name="lbl_cerveja">Cadastro de cerveja</string>
     <string name="lbl_ciddes">Cidades</string>
     <string name="lbl_estabeleciemento">Estabelecimento</string>
     <string name="lbl_estados">Estados</string>
+    <string name="lbl_marca">Marca</string>
+    <string name="lbl_nomeCerveja">Cerveja</string>
     <string name="lbl_preco">Preço</string>
     <string name="low_storage_error">Espaço em disco insuficiente para baixar as dependências do detector de faces</string>
+    <string name="marca_value">marcaCerveja</string>
     <string name="mr_media_route_button_content_description">Cast</string>
     <string name="mr_media_route_chooser_searching">Searching for devices\u2026</string>
     <string name="mr_media_route_chooser_title">Connect to device</string>

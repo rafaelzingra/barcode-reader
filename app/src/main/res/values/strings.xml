@@ -14,11 +14,16 @@
     <string name="barcode_error">"Erro ao ler código de barras: %1$s"</string>
     <string name="adicionar">Adicionar</string>
     <string name="title_activity_add">Adicionar Preço</string>
-    <string name="lbl_cerveja">Cerveja</string>
+    <string name="lbl_cerveja">Cadastro de cerveja</string>
     <string name="lbl_ciddes">Cidades</string>
     <string name="lbl_estados">Estados</string>
+    <string name="lbl_marca">Marca</string>
+    <string name="lbl_nomeCerveja">Cerveja</string>
     <string name="lbl_preco">Preço</string>
     <string name="btn_voltar">Voltar</string>
-    <string name="btn_add">Add Valor</string>
+    <string name="btn_add">Adicionar</string>
     <string name="lbl_estabeleciemento">Estabelecimento</string>
+    <string name="barcode_value">nomeCerveja</string>
+    <string name="marca_value">marcaCerveja</string>
+
 </resources>

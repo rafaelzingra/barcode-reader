@@ -23,7 +23,7 @@
             android:value="barcode" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".control.MainActivity"
             android:label="@string/title_activity_main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,10 +32,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BarcodeCaptureActivity"
+            android:name=".control.BarcodeCaptureActivity"
             android:label="Leitor de código de barras" />
         <activity
-            android:name=".AddActivity"
+            android:name=".control.AddActivity"
             android:label="@string/title_activity_add"></activity>
     </application>
 

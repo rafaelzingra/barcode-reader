@@ -5,7 +5,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.google.android.gms.samples.vision.barcodereader.MainActivity"
+    tools:context=".control.MainActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -25,7 +25,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="232dp"
+        android:layout_height="245dp"
         android:background="#747474">
 
         <TextView
@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textView11"
+            android:id="@+id/marca_value"
             android:layout_below="@+id/lbl_cerveja"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -66,20 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textView12"
-            android:layout_below="@+id/lbl_cerveja"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignRight="@+id/lbl_cerveja"
-            android:layout_alignEnd="@+id/lbl_cerveja"
-            android:text="Rótulo"
-            android:layout_gravity="left|center" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textView13"
+            android:id="@+id/precoMedio_value"
             android:layout_below="@+id/lbl_cerveja"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -88,69 +75,56 @@
             android:layout_gravity="top|left|center"
             android:text="Preço Médio" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/menorPreco_value"
+            android:layout_below="@+id/lbl_cerveja"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/lbl_cerveja"
+            android:layout_alignEnd="@+id/lbl_cerveja"
+            android:text="Menor Preço" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView14"
-                android:layout_below="@+id/lbl_cerveja"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignRight="@+id/lbl_cerveja"
-                android:layout_alignEnd="@+id/lbl_cerveja"
-                android:text="Menor Preço"
-                android:layout_weight="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/menorPreco_local"
+            android:layout_below="@+id/lbl_cerveja"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/lbl_cerveja"
+            android:layout_alignEnd="@+id/lbl_cerveja"
+            android:text="Local" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView15"
-                android:layout_below="@+id/lbl_cerveja"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignRight="@+id/lbl_cerveja"
-                android:layout_alignEnd="@+id/lbl_cerveja"
-                android:text="Local"
-                android:layout_weight="1" />
-        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/maiorPreco_value"
+            android:layout_below="@+id/lbl_cerveja"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/lbl_cerveja"
+            android:layout_alignEnd="@+id/lbl_cerveja"
+            android:text="Maior Preço"
+            android:layout_weight="1" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/maiorPreco_local"
+            android:layout_below="@+id/lbl_cerveja"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/lbl_cerveja"
+            android:layout_alignEnd="@+id/lbl_cerveja"
+            android:text="Local"
+            android:layout_weight="1" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView16"
-                android:layout_below="@+id/lbl_cerveja"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignRight="@+id/lbl_cerveja"
-                android:layout_alignEnd="@+id/lbl_cerveja"
-                android:text="Maior Preço"
-                android:layout_weight="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView17"
-                android:layout_below="@+id/lbl_cerveja"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignRight="@+id/lbl_cerveja"
-                android:layout_alignEnd="@+id/lbl_cerveja"
-                android:text="Local"
-                android:layout_weight="1" />
-        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout

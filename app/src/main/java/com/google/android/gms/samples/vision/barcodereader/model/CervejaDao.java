@@ -1,11 +1,8 @@
-package com.google.android.gms.samples.vision.barcodereader.control;
+package com.google.android.gms.samples.vision.barcodereader.model;
 
 import android.content.ContentValues;
-import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-
-import com.google.android.gms.samples.vision.barcodereader.model.Cerveja;
 
 import java.util.ArrayList;
 
@@ -53,5 +50,39 @@ public class CervejaDao {
         }
 
         return cervejas;
+    }
+
+    public Cerveja getCerveja(String barcode) {
+        Cerveja cerveja = new Cerveja();
+        Cursor aux = null;
+        try {
+            aux = conn.rawQuery("select * from cerveja where barcode='" + barcode + "'", null);
+            aux.moveToFirst();
+            while (aux.moveToNext()) {
+                cerveja.setBarcode(barcode);
+                cerveja.setRotulo(aux.getString(2));
+                cerveja.setMarca(aux.getString(3));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return cerveja;
+
+    }
+
+    public Cursor getCodigo() {
+        Cursor getCodigo = null;
+        try {
+            getCodigo = conn.rawQuery("select max(_id)from cerveja", null);
+            getCodigo.moveToFirst();
+            int codigo = getCodigo.getInt(0);
+            System.out.println("codigo:" + codigo);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return getCodigo/*.getColumnIndex("_id")*/;
     }
 }

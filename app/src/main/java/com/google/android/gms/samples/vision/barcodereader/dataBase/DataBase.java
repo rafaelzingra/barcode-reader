@@ -4,9 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by Cleber T. Moreira on 12/03/2016.
- */
+
 public class DataBase extends SQLiteOpenHelper {
 
     public DataBase(Context context){
@@ -28,7 +26,7 @@ public class DataBase extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO ESTADO VALUES(4, 'Amapá', 'AP')");
         db.execSQL("INSERT INTO ESTADO VALUES(5, 'Bahia', 'BA')");
         db.execSQL("INSERT INTO ESTADO VALUES(6, 'Ceará', 'CE')");
-        db.execSQL("INSERT INTO ESTADO VALUES(7, 'Distrito Federal', 'DF')");
+        db.execSQL("INSERT INTO ``ESTADO VALUES(7, 'Distrito Federal', 'DF')");
         db.execSQL("INSERT INTO ESTADO VALUES(8, 'Espírito Santo', 'ES')");
         db.execSQL("INSERT INTO ESTADO VALUES(9, 'Goiás', 'GO')");
         db.execSQL("INSERT INTO ESTADO VALUES(10, 'Maranhão', 'MA')");

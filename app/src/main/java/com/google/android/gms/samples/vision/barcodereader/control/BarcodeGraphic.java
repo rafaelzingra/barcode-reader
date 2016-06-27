@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.android.gms.samples.vision.barcodereader;
+package com.google.android.gms.samples.vision.barcodereader.control;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -29,16 +29,13 @@ import com.google.android.gms.vision.barcode.Barcode;
  */
 public class BarcodeGraphic extends GraphicOverlay.Graphic {
 
-    private int mId;
-
     private static final int COLOR_CHOICES[] = {
             Color.BLUE,
             Color.CYAN,
             Color.GREEN
     };
-
     private static int mCurrentColorIndex = 0;
-
+    private int mId;
     private Paint mRectPaint;
     private Paint mTextPaint;
     private volatile Barcode mBarcode;
